@@ -3,7 +3,7 @@ name: opencode-multistack-docs
 description: Stack-aware OpenCode documentation orchestration for software repositories. Use when generating/updating technical docs from codebases with unknown or mixed stacks. First detect active tech stack from repository signals, then load only matching stack modules (Laravel/PHP, Next.js/Node, Django/Python, Go/Fiber, or generic fallback) to avoid irrelevant analysis and improve accuracy.
 ---
 
-Run this workflow exactly:
+Run this workflow exactly (quality profile defaults to MAX, not fast mode):
 
 1) Detect stack first (mandatory)
 - Read `references/stack-detection.md`.
@@ -22,8 +22,10 @@ Run this workflow exactly:
 - Use stack module checklist for routes, models, migrations/schema, domain flows, API surfaces, ops runbook.
 - Produce docs in clear order: overview -> architecture -> domain/data -> API -> operations.
 
-4) Apply quality gate
+4) Apply quality gates
 - Read `references/quality-gate.md` and enforce all checks before finalizing.
+- Read `references/quality-floor.md` and enforce persistent best-quality floor.
+- No-pass, no-deploy.
 
 5) Multi-stack behavior
 - In monorepos, run per-package detection, then merge outputs into one index with per-stack sections.
