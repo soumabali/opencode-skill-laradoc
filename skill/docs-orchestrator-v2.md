@@ -38,7 +38,9 @@ Default quality profile: **MAX** (no shortcut mode unless user explicitly asks f
    - troubleshooting
 5. If user asks best/high quality (default), generate Docusaurus-ready structure with bilingual content (`en` + `id`).
 6. Apply `skill/multistack/references/quality-gate.md` and `skill/multistack/references/quality-floor.md`.
-7. Mark uncertain claims with `verification required`.
+7. Apply `skill/multistack/references/quality-consistency-contract.md` to enforce deterministic output shape and presentation.
+8. Apply `skill/multistack/references/quality-gold-standard.md` for full high-quality breadth, style, and phased execution.
+9. Mark uncertain claims with `verification required`.
 
 ## Default Agent Routing
 
@@ -52,6 +54,8 @@ Default quality profile: **MAX** (no shortcut mode unless user explicitly asks f
 - No speculative claims without code evidence.
 - Enforce full-scan coverage for the repository (or all target packages in monorepo).
 - For MAX profile, output must be Docusaurus-ready and bilingual (`en` + `id`).
+- Enforce Quality Consistency Contract in MAX profile (fixed IA, fixed section skeleton, fixed nav semantics).
+- Enforce Quality Gold Standard in MAX profile (native Docusaurus, bilingual i18n, expanded page set, phased passes).
 - **No-pass, no-deploy**: do not deploy if any gate fails.
 - If requested agent/profile is unavailable, stop and report instead of silent fallback.
 
@@ -63,3 +67,6 @@ Default quality profile: **MAX** (no shortcut mode unless user explicitly asks f
 - Traceability score <90%.
 - Docusaurus structure missing when MAX profile is active.
 - Bilingual content missing when MAX profile is active.
+- IA order or section skeleton deviates from Quality Consistency Contract.
+- Build/output uses ad-hoc HTML converter instead of native Docusaurus in MAX mode.
+- Expanded quality page set is missing without explicit applicability notes.

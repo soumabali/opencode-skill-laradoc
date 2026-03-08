@@ -22,9 +22,11 @@ Run this workflow exactly (quality profile defaults to MAX, not fast mode):
 - Use stack module checklist for routes, models, migrations/schema, domain flows, API surfaces, ops runbook.
 - Produce docs in clear order: overview -> architecture -> domain/data -> API -> operations.
 
-4) Apply quality gates
+4) Apply quality gates + consistency standards
 - Read `references/quality-gate.md` and enforce all checks before finalizing.
 - Read `references/quality-floor.md` and enforce persistent best-quality floor.
+- Read `references/quality-consistency-contract.md` to lock deterministic output shape.
+- Read `references/quality-gold-standard.md` to enforce high-quality breadth/style/process.
 - No-pass, no-deploy.
 
 5) Multi-stack behavior
