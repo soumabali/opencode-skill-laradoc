@@ -37,6 +37,12 @@ If a page is not applicable, keep placeholder with `verification required` and r
 - Practical onboarding style: explain where to start, what to check, and common pitfalls.
 - Keep bilingual parity: EN page and ID page should carry the same intent and structure.
 - Keep technical language precise and concise (no marketing tone).
+- Preserve page-specific writing patterns:
+  - onboarding pages: step-by-step and action-oriented
+  - API pages: endpoint/cookbook/catalog oriented
+  - DB pages: schema/domain mapping oriented
+  - ops pages: runbook/checklist oriented
+  - verification pages: audit/matrix oriented
 
 ## 4) Multi-pass Production Flow
 
@@ -70,9 +76,10 @@ After deploy, verify:
 Use this exact output block for final report:
 - STATUS
 - DONE
-- NEXT
+- FILES CHANGED
+- COMMIT/PUSH STATUS
+- QUALITY SUMMARY
 - BLOCKER
 - ETA
-- LIVE URLS
-- FILES CHANGED
-- QUALITY SUMMARY
+
+If any critical deliverable is missing (mandatory docs, mandatory sections, parity checks, quality score threshold), set STATUS=FAIL and block deploy.
